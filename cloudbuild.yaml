@@ -2,12 +2,6 @@
 # $ gcloud builds submit . --config=cloudbuild.yaml
 
 steps:
-# Build the Bazel builder and output the version we built with.
-- name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '--tag=gcr.io/$PROJECT_ID/bazel', '.']
-- name: 'gcr.io/$PROJECT_ID/bazel'
-  args: ['version']
-
 # Build the example.
 - name: 'gcr.io/$PROJECT_ID/bazel'
   args: ['test', '-c', 'opt', '--', '//tensorflow/...', '-//tensorflow/compiler/...', '-//tensorflow/lite/...']
