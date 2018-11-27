@@ -20,5 +20,4 @@ steps:
   dir: 'examples'
 
 # TODO(mattmoor): Test docker_push as well.
-
 images: ['gcr.io/$PROJECT_ID/bazel']
