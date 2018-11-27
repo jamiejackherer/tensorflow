@@ -19,8 +19,6 @@ steps:
   args: ['build', '--config=opt', '//tensorflow/tools/pip_package:build_pip_package']
   dir: 'examples'
 
-
-
 # TODO(mattmoor): Test docker_push as well.
 
 images: ['gcr.io/$PROJECT_ID/bazel']
